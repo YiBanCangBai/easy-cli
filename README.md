@@ -1,7 +1,7 @@
 ## 全局安装
 
 ```javascript
-gnpm i @lib/easy-cli
+gnpm i -g @lib/easy-cli
 ```
 
 
