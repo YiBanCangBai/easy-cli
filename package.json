@@ -22,6 +22,7 @@
     "download-git-repo": "^3.0.2",
     "fs-extra": "^9.0.0",
     "inquirer": "^7.1.0",
-    "ora": "^4.0.3"
+    "ora": "^4.0.3",
+    "shelljs": "^0.8.4"
   }
 }
