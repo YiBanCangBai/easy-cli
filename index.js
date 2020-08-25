@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-
+const path = require('path')
 const program = require('commander')
+const chalk = require('chalk')
+const ora = require('ora')
 const create = require('./lib/create')
 const templates = require('./lib/templates')
 const download = require('./lib/download')
-const chalk = require('chalk')
-const ora = require('ora')
 const overwrite = require('./lib/overwrite')
+const merge = require('./lib/merge')
 
 program
 	.version('1.0.0')
@@ -19,9 +20,18 @@ program
 			const res = await create(projectName)
 			if (!res) return
 			const { downloadUrl, name } = templates[templateName]
+			const sourceDir = path.resolve(name)
+			const targetDir = path.resolve(projectName || '.')
 			download(downloadUrl, projectName)
-			if (res.action === 'overwrite') {
-				overwrite(projectName, name)
+			switch(res.action) {
+				case 'overwrite':
+					overwrite(sourceDir, targetDir, projectName)
+					break;
+				case 'merge':
+					merge(sourceDir, targetDir, name, projectName)
+					break;
+				default:
+					break;
 			}
 		} catch (err) {
 			console.log(`${chalk.cyan(err)}`)
