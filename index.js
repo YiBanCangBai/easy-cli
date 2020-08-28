@@ -22,7 +22,7 @@ program
 			const { downloadUrl, name } = templates[templateName]
 			const sourceDir = path.resolve(name)
 			const targetDir = path.resolve(projectName || '.')
-			download(downloadUrl, projectName)
+			download(downloadUrl, name, projectName)
 			switch(res.action) {
 				case 'overwrite':
 					overwrite(sourceDir, targetDir, projectName)
