@@ -14,7 +14,7 @@ program
 
 program
 	.command('create <template> <project>')
-	.description('自动创建项目模板')
+	.description('Generate local project template')
 	.action(async (templateName, projectName) =>{
 		try {
 			const res = await create(projectName)
@@ -40,7 +40,7 @@ program
 
 program
 	.command('list')
-	.description('所有可用模板都在这里')
+	.description('All available templates here')
 	.action(() => {
 		for(let key in templates) {
 			ora(`${chalk.green(key)} ${chalk.cyan(templates[key].description)}`).succeed()
