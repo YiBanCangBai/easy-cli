@@ -4,10 +4,12 @@ const program = require('commander')
 const chalk = require('chalk')
 const ora = require('ora')
 const create = require('./lib/create')
-const templates = require('./lib/templates')
+const process = require('process')
+const templates = require(`${process.env.HOME}/easyConfig.js`)
 const download = require('./lib/download')
 const overwrite = require('./lib/overwrite')
 const merge = require('./lib/merge')
+const fetch = require('./lib/fetch')
 
 program
 	.version('1.0.0')
@@ -36,6 +38,13 @@ program
 		} catch (err) {
 			console.log(`${chalk.cyan(err)}`)
 		}
+	})
+
+program
+	.command('bind <url>')
+	.description('Fetching remote config file')
+	.action(async(url) => {
+		await fetch(url)
 	})
 
 program
