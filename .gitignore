@@ -20,7 +20,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 dist/
-#node_modules/
+node_modules/
 npm-debug.log
 yarn-error.log
 .vscode/
