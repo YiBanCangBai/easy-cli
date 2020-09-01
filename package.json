@@ -21,7 +21,7 @@
     "commander": "^5.0.0",
     "download-git-repo": "^3.0.2",
     "fs-extra": "^9.0.0",
-    "inquirer": "^7.1.0",
+    "inquirer": "^7.3.3",
     "ora": "^4.0.3",
     "request": "^2.88.2",
     "shelljs": "^0.8.4"
