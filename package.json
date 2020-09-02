@@ -1,6 +1,6 @@
 {
-  "name": "@lib/easy-cli",
-  "version": "1.0.3",
+  "name": "@yibancangbai/easy-cli",
+  "version": "1.0.0",
   "description": "简易使用的脚手架工具",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "easy",
     "cli"
   ],
-  "author": "Evan Chan",
+  "author": "Evan Chen",
   "license": "ISC",
   "bin": {
     "easy": "index.js"
