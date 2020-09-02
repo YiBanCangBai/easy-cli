@@ -12,7 +12,7 @@ npm install -g @yibancangbai/easy-cli
 
 以下是所有可用命令，您也可以通过在终端内输入easy -h来查看：
 
-create <templateName> <projectName>: 
+create &lt;templateName&gt; &lt;projectName&gt;: 
 
 ​		这种方式会在当前目录下创建文件名为```projectName```的项目，如果文件名已存在可选择合并、覆盖或取消操作。
 
@@ -22,15 +22,15 @@ list:
 
 ​		将会在终端内列出所有可用的模板列表
 
-bind <url>:
+bind &lt;url&gt;:
 
 ​		将会从远程获取包含模板配置信息的js文件内容，并通过nodejs将其内容写入```process.env.HOME```目录下生成的easyConfig.js文件。
 
 ## 使用
 
   		1. 在任意静态服务器上传包含模板配置信息的js文件，该文件内容格式后边会讲到；
-  		2. 终端中运行 ```easy bind <远程js文件地址>```，将模板配置信息同步到本地；
-  		3. 运行 ```easy create```  命令开始初始化本地项目；
+  		2. 终端中运行 easy bind &lt;远程js文件地址&gt;，将模板配置信息同步到本地；
+  		3. 运行 easy create  命令开始初始化本地项目；
 
 ## 模板配置文件
 
