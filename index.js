@@ -6,15 +6,22 @@ const ora = require('ora')
 const create = require('./lib/create')
 const process = require('process')
 const { windir, HOME, USERPROFILE } = process.env
+// 区分windows与mac
 let file_path = windir ? USERPROFILE : HOME
+// 如果本地没有执行bind命令绑定配置文件，走默认配置
+if (!fs.existsSync(`${file_path}/easyConfig.js`)) {
+  file_path = '.'
+}
+
 const templates = require(`${file_path}/easyConfig.js`)
 const download = require('./lib/download')
 const overwrite = require('./lib/overwrite')
 const merge = require('./lib/merge')
 const fetch = require('./lib/fetch')
+// const { log } = console
 
 program
-	.version('1.0.0')
+	.version('1.1.0')
 
 program
 	.command('create <template> <project>')
