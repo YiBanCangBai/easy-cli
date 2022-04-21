@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const path = require('path')
+const fs = require('fs-extra')
 const program = require('commander')
 const chalk = require('chalk')
 const ora = require('ora')
