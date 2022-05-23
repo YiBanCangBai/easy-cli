@@ -22,7 +22,7 @@ const fetch = require('./lib/fetch')
 // const { log } = console
 
 program
-	.version('1.3.0')
+	.version('1.4.0')
 
 program
 	.command('create <template> <project>')
