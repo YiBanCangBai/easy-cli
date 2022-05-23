@@ -37,7 +37,7 @@ bind &lt;url&gt;:
 ```javascript
 module.exports = {
   templateName: {
-    name: 'easy-temporary-' + templateName,
+    name: 'easy-template-' + templateName,
     repo: 'http://gitlab.ops...，模板项目仓库页面地址，仅供查看',
     downloadUrl: 'git@gitlab.ops...，模板项目的完整git clone地址，用于下载',
     description: '模板项目描述'
